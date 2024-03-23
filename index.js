@@ -7,8 +7,7 @@ app.use(express.json());
 connectDatabase();
 app.use("/api/users", require("./Routes/Users"));
 app.use("/api/posts", require("./Routes/Posts"));
-app.use("/api/profile", require("./Routes/Profile"));
-app.use("/api/auth", require("./Routes/Auth"));
+app.use("/api/profiles", require("./Routes/Profiles"));
 app.get("/", (request, response) => response.send("Thank You"));
 app.listen(PORT, () => {
     console.log("start server");
