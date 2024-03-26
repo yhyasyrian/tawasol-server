@@ -20,7 +20,7 @@ module.exports = class CreateUder extends User {
                 await this.checkIfUserIsNotExistsOrStopReponse({ email });
             if (checkIfUserIsNotExistsOrStopReponse)
                 return checkIfUserIsNotExistsOrStopReponse;
-            let user = this.createUserWithGetResult({ name, email, password });
+            let user = await this.createUserWithGetResult({ name, email, password });
             await this.createTokenAndSetResponse(user.id);
         } catch (error) {
             console.error(error);

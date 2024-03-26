@@ -96,7 +96,7 @@
 						"header": [
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMTk1Y2UyNzJiZGY1ZjU2YjhjYTU0In0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTM3OTk0Mn0.iW_T5ZGHPuid1PRb9D5QfXMYNxoqRW4aiS-2A26D6Ys",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
 								"type": "text"
 							}
 						],
@@ -114,6 +114,205 @@
 								"api",
 								"users",
 								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								"me"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"study\",\n    \"company\": \"Y\",\n    \"website\": \"https://www.yhyasyrian.com\",\n    \"country\": \"Syria\",\n    \"location\": \"Syria\",\n    \"bio\": \"Hello World\",\n    \"skills\": [\n        \"HTML\",\n        \"CSS\"\n    ],\n    \"experience\": [\n        {\n            \"title\": \"testgram\",\n            \"company\": \"hsoub\",\n            \"location\": \"online\",\n            \"from\": \"2024-03-10\",\n            \"current\": true,\n            \"description\": \"create site same instagram with Laravel\"\n        }\n    ],\n    \"education\": [\n        {\n            \"school\": \"hsoub\",\n            \"degree\": \"i am stady\",\n            \"from\": \"2024-07-01\",\n            \"current\": true,\n            \"description\": \"course online\"\n        }\n    ],\n    \"github\":\"github.com/yhyasyrian\",\n    \"youtube\":\"https://www.youtube.com/channel/UCnX6udGe8kmk7y9C9ZFxXdg\",\n    \"facebook\":\"\",\n    \"instagram\":\"\",\n    \"linkedin\":\"linkedin.com/in/yhya-nesb\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/user/6602439a2447cd3f5e53fb01",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/user/6602439a2447cd3f5e53fb01",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								"user",
+								"6602439a2447cd3f5e53fb01"
 							],
 							"query": [
 								{

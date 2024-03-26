@@ -1,22 +1,10 @@
 const UserModel = require("../../Models/User");
+const Controller = require("../Controller");
 const jwt = require("jsonwebtoken");
 const config = require("config");
-const { validationResult } = require("express-validator");
-module.exports = class User {
-    constructor(request, response) {
-        this.request = request;
-        this.response = response;
-    }
+module.exports = class User extends Controller {
     async findUser(objectSearch) {
-        return await UserModel.findOne(objectSearch);
-    }
-    showErrorIsExistsOrFalse() {
-        const errors = validationResult(this.request);
-        if (!errors.isEmpty()) return this.setErrors(errors.array());
-        return false;
-    }
-    setErrors(arrayErrors) {
-        return this.response.status(500).json({ errors: arrayErrors });
+        return UserModel.findOne(objectSearch);
     }
     createPayload(idUser) {
         return {
