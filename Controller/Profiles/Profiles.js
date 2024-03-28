@@ -11,6 +11,6 @@ module.exports = class Profiles extends Controller {
     }
 
     async getProfiles() {
-        return ProfileModel.find().populate("user", ['name']);
+        return ProfileModel.find().populate("user", ['name'])
     }
 }
