@@ -5,6 +5,7 @@ const MeProfile = require("../Controller/Profiles/MeProfile");
 const Profiles = require("../Controller/Profiles/Profiles");
 const SearchProfile = require("../Controller/Profiles/SearchProfile");
 const DeleteAccount = require("../Controller/DeleteAccount");
+const UploadPhoto = require("../Controller/Profiles/UploadController");
 const router = express.Router();
 
 router.post("/",Auth,CreateProfile.rule,async (req, res) => {
@@ -26,5 +27,9 @@ router.get("/user/:user_id",Auth,async (req, res) => {
 router.delete("/",Auth,async (req, res) => {
     let deleteAccountController = new DeleteAccount(req,res);
     await deleteAccountController.delete();
+})
+router.post("/upload",Auth,async (req, res) => {
+    let uploadController = new UploadPhoto(req,res);
+    await uploadController.upload();
 })
 module.exports = router;
