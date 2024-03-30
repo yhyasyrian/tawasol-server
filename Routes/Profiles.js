@@ -7,6 +7,7 @@ const SearchProfileController = require("../Controller/Profiles/SearchProfileCon
 const DeleteAccount = require("../Controller/DeleteAccount");
 const UploadController = require("../Controller/Profiles/UploadController");
 const ExperienceController = require("../Controller/Profiles/ExperienceController");
+const EducationController = require("../Controller/Profiles/EducationController");
 const router = express.Router();
 
 router.post("/",Auth,CreateProfileController.rule,async (req, res) => {
@@ -28,17 +29,25 @@ router.get("/user/:user_id",Auth,async (req, res) => {
 router.delete("/",Auth,async (req, res) => {
     let deleteAccountController = new DeleteAccount(req,res);
     await deleteAccountController.delete();
-})
+});
 router.post("/upload",Auth,async (req, res) => {
     let uploadController = new UploadController(req,res);
     await uploadController.upload();
-})
+});
 router.post("/experience",Auth,ExperienceController.rule,async (req, res) => {
     let experienceController = new ExperienceController(req,res);
     await experienceController.store();
 });
 router.delete("/experience/:id",Auth,async (req, res) => {
     let experienceController = new ExperienceController(req,res);
+    await experienceController.delete();
+});
+router.post("/education",Auth,EducationController.rule,async (req, res) => {
+    let experienceController = new EducationController(req,res);
+    await experienceController.store();
+});
+router.delete("/education/:id",Auth,async (req, res) => {
+    let experienceController = new EducationController(req,res);
     await experienceController.delete();
 });
 module.exports = router;
