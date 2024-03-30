@@ -5,7 +5,8 @@ const MeProfileController = require("../Controller/Profiles/MeProfileController"
 const ProfilesController = require("../Controller/Profiles/ProfilesController");
 const SearchProfileController = require("../Controller/Profiles/SearchProfileController");
 const DeleteAccount = require("../Controller/DeleteAccount");
-const UploadPhoto = require("../Controller/Profiles/UploadController");
+const UploadController = require("../Controller/Profiles/UploadController");
+const ExperienceController = require("../Controller/Profiles/ExperienceController");
 const router = express.Router();
 
 router.post("/",Auth,CreateProfileController.rule,async (req, res) => {
@@ -29,7 +30,11 @@ router.delete("/",Auth,async (req, res) => {
     await deleteAccountController.delete();
 })
 router.post("/upload",Auth,async (req, res) => {
-    let uploadController = new UploadPhoto(req,res);
+    let uploadController = new UploadController(req,res);
     await uploadController.upload();
 })
+router.post("/experience",Auth,ExperienceController.rule,async (req, res) => {
+    let experienceController = new ExperienceController(req,res);
+    experienceController.start();
+});
 module.exports = router;
