@@ -18,11 +18,11 @@ module.exports = class UploadController extends Controller {
     }
     async upload() {
         let upload = multer({storage: this.storage}).single('');
-        upload(this.request,this.response, async (error) => {
+        await upload(this.request,this.response, async (error) => {
             if (error)
                 this.setErrors("Error in upload");
             else
-                this.response.json({ok:true});
+                this.response.json({ok:true,des:"hi"});
         })
     }
 }

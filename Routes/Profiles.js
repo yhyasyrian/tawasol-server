@@ -1,28 +1,28 @@
 const express = require("express");
 const Auth = require("../Controller/Users/AuthUser");
-const CreateProfile = require("../Controller/Profiles/CreateProfile");
-const MeProfile = require("../Controller/Profiles/MeProfile");
-const Profiles = require("../Controller/Profiles/Profiles");
-const SearchProfile = require("../Controller/Profiles/SearchProfile");
+const CreateProfileController = require("../Controller/Profiles/CreateProfileController");
+const MeProfileController = require("../Controller/Profiles/MeProfileController");
+const ProfilesController = require("../Controller/Profiles/ProfilesController");
+const SearchProfileController = require("../Controller/Profiles/SearchProfileController");
 const DeleteAccount = require("../Controller/DeleteAccount");
 const UploadPhoto = require("../Controller/Profiles/UploadController");
 const router = express.Router();
 
-router.post("/",Auth,CreateProfile.rule,async (req, res) => {
-    let createProfileController = new CreateProfile(req,res);
+router.post("/",Auth,CreateProfileController.rule,async (req, res) => {
+    let createProfileController = new CreateProfileController(req,res);
     await createProfileController.start();
 });
 router.get("/me",Auth,async (req, res) => {
-    let MeProfileController = new MeProfile(req,res);
-    await MeProfileController.start();
+    let meProfileController = new MeProfileController(req,res);
+    await meProfileController.start();
 });
 router.get("/",Auth,async (req, res) => {
-    let ProfilesController = new Profiles(req,res);
-    await ProfilesController.start();
+    let profilesController = new ProfilesController(req,res);
+    await profilesController.start();
 });
 router.get("/user/:user_id",Auth,async (req, res) => {
-    let SearchProfileController = new SearchProfile(req,res);
-    await SearchProfileController.start();
+    let searchProfileController = new SearchProfileController(req,res);
+    await searchProfileController.start();
 });
 router.delete("/",Auth,async (req, res) => {
     let deleteAccountController = new DeleteAccount(req,res);

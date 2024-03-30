@@ -1,6 +1,6 @@
 const Controller = require("../Controller");
 const ProfileModel = require("../../Models/Profile");
-module.exports = class Profiles extends Controller {
+module.exports = class ProfilesController extends Controller {
     async start() {
         try {
             return this.response.json(await this.getProfiles());

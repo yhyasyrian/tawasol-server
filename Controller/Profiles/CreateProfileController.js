@@ -2,7 +2,7 @@ const Controller = require("../Controller");
 const ProfileModel = require("../../Models/Profile");
 const {check} = require("express-validator");
 const normalize = require("normalize-url");
-module.exports = class CreateProfile extends Controller {
+module.exports = class CreateProfileController extends Controller {
     static rule = [
         check('status', 'The field status is required').notEmpty(),
         check('skills', 'The field skills is required').notEmpty(),
