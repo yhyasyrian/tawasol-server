@@ -35,6 +35,10 @@ router.post("/upload",Auth,async (req, res) => {
 })
 router.post("/experience",Auth,ExperienceController.rule,async (req, res) => {
     let experienceController = new ExperienceController(req,res);
-    experienceController.start();
+    await experienceController.store();
+});
+router.delete("/experience/:id",Auth,async (req, res) => {
+    let experienceController = new ExperienceController(req,res);
+    await experienceController.delete();
 });
 module.exports = router;
