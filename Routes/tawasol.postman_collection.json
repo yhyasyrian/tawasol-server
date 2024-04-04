@@ -639,6 +639,54 @@
 						"url": "http://127.0.0.1:4000/api/posts/660e3063c4173e91ae75eff0"
 					},
 					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/posts/unlike/660e3063c4173e91ae75eff0",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/unlike/660e3063c4173e91ae75eff0"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/posts/like/660e3063c4173e91ae75eff0",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/like/660e3063c4173e91ae75eff0"
+					},
+					"response": []
 				}
 			]
 		}
