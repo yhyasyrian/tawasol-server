@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "94a2f139-524b-46e6-9ff4-d0e6b76f7829",
+		"_postman_id": "72de3d0f-d239-4fb8-96f2-c32ac5749e75",
 		"name": "tawasol",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "33849110"
@@ -583,6 +583,60 @@
 							}
 						},
 						"url": "http://127.0.0.1:4000/api/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/posts/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/posts/660e3063c4173e91ae75eff0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/660e3063c4173e91ae75eff0"
 					},
 					"response": []
 				}
