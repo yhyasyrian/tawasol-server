@@ -129,7 +129,7 @@
 			]
 		},
 		{
-			"name": "Profiles",
+			"name": "profiles",
 			"item": [
 				{
 					"name": "http://127.0.0.1:4000/api/profiles/",
@@ -322,6 +322,267 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/experience",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Laravel\",\n    \"company\" : \"Hsoub\",\n    \"from\" : \"2024/1/1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/experience",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								"experience"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/experience/6607e73a8b7e62bc9bd7309d",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/experience/6607e73a8b7e62bc9bd7309d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								"experience",
+								"6607e73a8b7e62bc9bd7309d"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/education",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"school\" : \"AL-Saade\",\n    \"degree\" : \"91%\",\n    \"from\" : \"2024/1/1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/education",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								"education"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/education/6607ecc762f0ec514de883b8",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwMjQzOWEyNDQ3Y2QzZjVlNTNmYjAxIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTQyNDYwMn0.wt0B2hPi_7vcbkcf_v-Ms20hhgYXmYbww-848xuO58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/education/6607ecc762f0ec514de883b8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								"education",
+								"6607ecc762f0ec514de883b8"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/profiles/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwNTM5NTYzOTc4NjY3YjkyOWMyOTBlIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMTYxODQ5MX0.op4fhevPyAlQA4xEhGFDWuzFEzpPK5QELsnyQSwLU-w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/api/profiles/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"profiles",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "http://127.0.0.1:4000/api/posts/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Hello World\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/"
 					},
 					"response": []
 				}
