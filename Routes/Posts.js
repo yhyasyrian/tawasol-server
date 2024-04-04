@@ -5,12 +5,18 @@ const ShowPostController = require("../Controller/Posts/ShowPostController");
 const LikesPostController = require("../Controller/Posts/LikesPostController");
 const CreateCommentController = require("../Controller/Posts/CreateCommentController");
 const DeleteCommentController = require("../Controller/Posts/DeleteCommentController");
+const DeletePostController = require("../Controller/Posts/DeletePostController");
 const Auth = require("../Controller/Users/AuthUser");
 const router = express.Router();
 
 router.post("/", Auth, CreatePostController.rule, async (req, res) => {
     const createPostController = new CreatePostController(req, res);
     await createPostController.start();
+})
+
+router.delete('/:id', Auth, async (req, res) => {
+    let deletePostController = new DeletePostController(req, res);
+    await deletePostController.start();
 })
 
 router.get('/', Auth,

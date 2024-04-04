@@ -1,13 +1,14 @@
 const Controller = require("./Controller");
 const ProfileModel = require("./../Models/Profile");
 const UserModel = require("./../Models/User");
+const PostModel = require("./../Models/Post");
 module.exports = class DeleteAccount extends Controller {
     constructor(request, response) {
         super(request,response);
         this.error = '';
     }
-    deletePost(){
-    //
+    async deletePost(){
+        return PostModel.deleteMany({user:this.request.user.id});
     }
     async deleteProfile() {
         return ProfileModel.findOneAndDelete({user:this.request.user.id});
@@ -18,7 +19,7 @@ module.exports = class DeleteAccount extends Controller {
     }
     async delete() {
         await Promise.all([
-            // this.deletePost(),
+            this.deletePost(),
            this.deleteProfile(),
            this.deleteUser(),
         ]).catch((err) => this.error = err);
