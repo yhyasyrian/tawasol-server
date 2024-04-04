@@ -687,6 +687,54 @@
 						"url": "http://127.0.0.1:4000/api/posts/like/660e3063c4173e91ae75eff0"
 					},
 					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/posts/comment/660e3063c4173e91ae75eff0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"One Comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/comment/660e3063c4173e91ae75eff0"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:4000/api/posts/comment/660e3063c4173e91ae75eff0/660e4eda0f4eb8f9dbfbe417",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYwZTMwM2U3ZjA1OThmY2EwOGNjOWVkIn0sImV4cGlyZXNJbiI6IjIgZGF5cyIsImlhdCI6MTcxMjIwNTg4Nn0.TmMewJTiMxrYs81bUbWZ1gUgZPitmqVEGCdqrl2Rhi8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"End Comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:4000/api/posts/comment/660e3063c4173e91ae75eff0/660e4eda0f4eb8f9dbfbe417"
+					},
+					"response": []
 				}
 			]
 		}

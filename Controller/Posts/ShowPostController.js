@@ -1,7 +1,7 @@
 const PostModel = require("../../Models/Post");
 const Controller = require("../Controller");
 module.exports = class ShowPostsController extends Controller {
-    async index() {
+    async start() {
         try {
             return this.response.json(await this.getPost());
         } catch (error) {

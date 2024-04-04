@@ -9,7 +9,7 @@ module.exports = class Controller {
         if (!errors.isEmpty()) return this.setErrors(errors.array());
         return false;
     }
-    setErrors(arrayErrors) {
-        return this.response.status(500).json({ errors: arrayErrors });
+    setErrors(arrayErrors,statusCode = 500) {
+        return this.response.status(statusCode).json({ errors: arrayErrors });
     }
 }

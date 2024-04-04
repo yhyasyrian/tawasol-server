@@ -6,7 +6,7 @@ module.exports = class CreatePostController extends Controller {
     static rule = [
         check('text','Post is required').notEmpty(),
     ];
-    async index() {
+    async start() {
         let showErrorIsExistsOrFalse = this.showErrorIsExistsOrFalse();
         if (showErrorIsExistsOrFalse) return showErrorIsExistsOrFalse;
         try {
