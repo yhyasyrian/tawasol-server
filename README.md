@@ -235,12 +235,6 @@ You can test with postman after import file: `./Routes/tawasol.postman_collectio
 > | ------------ | -------- | --------- | ------------------------- |
 > | x-auth-token | required | string    | Token account after login |
 
-##### Body
-
-> | name | type     | data type | description  |
-> | ---- | -------- | --------- | ------------ |
-> | text | required | string    | text comment |
-
 </details>
 <details>
  <summary><code>PUT</code>   <code><b>/unlike/{postId}</b></code></summary>
@@ -250,12 +244,6 @@ You can test with postman after import file: `./Routes/tawasol.postman_collectio
 > | name         | type     | data type | description               |
 > | ------------ | -------- | --------- | ------------------------- |
 > | x-auth-token | required | string    | Token account after login |
-
-##### Body
-
-> | name | type     | data type | description  |
-> | ---- | -------- | --------- | ------------ |
-> | text | required | string    | text comment |
 
 </details>
 
