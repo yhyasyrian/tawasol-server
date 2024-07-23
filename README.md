@@ -11,6 +11,16 @@ You can test with postman after import file: `./Routes/tawasol.postman_collectio
 ### api/users
 
 <details>
+ <summary><code>GET</code>   <code><b>/</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+<details>
  <summary><code>POST</code>   <code><b>/login</b></code></summary>
 
 ##### Body
@@ -32,16 +42,6 @@ You can test with postman after import file: `./Routes/tawasol.postman_collectio
 > | password | required | string    | N/A         |
 
 </details>
-<details>
- <summary><code>GET</code>   <code><b>/</b></code></summary>
-
-##### Headers
-
-> | name         | type     | data type | description               |
-> | ------------ | -------- | --------- | ------------------------- |
-> | x-auth-token | required | string    | Token account after login |
-
-</details>
 
 ### api/profiles
 
@@ -57,6 +57,16 @@ You can test with postman after import file: `./Routes/tawasol.postman_collectio
 </details>
 <details>
  <summary><code>GET</code>   <code><b>/me</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+<details>
+ <summary><code>GET</code>   <code><b>/{userId}</b></code></summary>
 
 ##### Headers
 
@@ -94,3 +104,182 @@ You can test with postman after import file: `./Routes/tawasol.postman_collectio
 > | linkedin   | required | string                                                             | Social Media     |
 
 </details>
+<details>
+ <summary><code>POST</code>   <code><b>/experience</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+##### Body
+
+> | name    | type     | data type | description           |
+> | ------- | -------- | --------- | --------------------- |
+> | title   | required | string    | title experience      |
+> | company | required | string    | name company          |
+> | from    | required | date      | date start experience |
+
+</details>
+<details>
+ <summary><code>POST</code>   <code><b>/education</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+##### Body
+
+> | name   | type     | data type | description          |
+> | ------ | -------- | --------- | -------------------- |
+> | title  | required | string    | title education      |
+> | degree | required | string    | degree education     |
+> | from   | required | date      | date start education |
+
+</details>
+<details>
+ <summary><code>DELETE</code>   <code><b>/{userId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+<details>
+ <summary><code>DELETE</code>   <code><b>/{userId}/experience</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+<details>
+ <summary><code>DELETE</code>   <code><b>/</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+
+### api/posts
+
+<details>
+ <summary><code>GET</code>   <code><b>/</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+<details>
+ <summary><code>GET</code>   <code><b>/{userId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+<details>
+ <summary><code>POST</code>   <code><b>/</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+##### Body
+
+> | name | type     | data type | description |
+> | ---- | -------- | --------- | ----------- |
+> | text | required | string    | text post   |
+
+</details>
+</details>
+<details>
+ <summary><code>POST</code>   <code><b>/comment/{postId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+##### Body
+
+> | name | type     | data type | description  |
+> | ---- | -------- | --------- | ------------ |
+> | text | required | string    | text comment |
+
+</details>
+<details>
+ <summary><code>PUT</code>   <code><b>/like/{postId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+##### Body
+
+> | name | type     | data type | description  |
+> | ---- | -------- | --------- | ------------ |
+> | text | required | string    | text comment |
+
+</details>
+<details>
+ <summary><code>PUT</code>   <code><b>/unlike/{postId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+##### Body
+
+> | name | type     | data type | description  |
+> | ---- | -------- | --------- | ------------ |
+> | text | required | string    | text comment |
+
+</details>
+
+<details>
+ <summary><code>DELETE</code>   <code><b>/comment/{postId}/{userId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+
+<details>
+ <summary><code>DELETE</code>   <code><b>/{postId}</b></code></summary>
+
+##### Headers
+
+> | name         | type     | data type | description               |
+> | ------------ | -------- | --------- | ------------------------- |
+> | x-auth-token | required | string    | Token account after login |
+
+</details>
+
+## Contributing
+Contributions are welcome!
